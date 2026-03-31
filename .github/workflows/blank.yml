@@ -8,4 +8,3 @@ jobs:
         run: |
           echo "Hey hi, welcome to my world"
           echo "Harsha is in the DevOps team"
-          echo "This is a sample workflow"
