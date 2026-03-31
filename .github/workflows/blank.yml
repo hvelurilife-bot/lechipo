@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Hello Step
         run: |
-        echo "hey hi wecome to my world"
-        echo "harsha is a devops team"
+          echo "hey hi wecome to my world"
+          echo "harsha is a devops team"
         
