@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello Step
-        run: echo "welcome harsha"
+        run: |
+        echo "hey hi wecome to my world"
+        echo "harsha is a devops team"
+        
