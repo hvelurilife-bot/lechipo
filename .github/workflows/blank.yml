@@ -1,14 +1,7 @@
 name: Hello world
 
 on:
-  push:
-    branches:
-      - main
-      - develop
-      - 'release/**'
-  pull_request:
-    branches:
-      - main    
+  push: 
 
 jobs:
 
@@ -26,7 +19,7 @@ jobs:
     steps:
       - name: STAGE Deployment
         run: |
-          echo "Deploying to STAGE environment"
+          echo "hello Deploying to STAGE environment"
 
   prod:
     runs-on: ubuntu-latest
