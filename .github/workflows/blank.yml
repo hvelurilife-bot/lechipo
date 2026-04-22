@@ -1,11 +1,38 @@
 name: Hello world
-on: workflow_dispatch
+
+on:
+  workflow_dispatch
 
 jobs:
-  hello:
+
+  sit:
     runs-on: ubuntu-latest
     steps:
-      - name: Run multiple shell commands
+      - name: SIT Deployment
         run: |
-          echo "Hey hi, welcome to my world"
+          echo "Deploying to SIT environment"
           echo "Harsha is in the DevOps team"
+
+  stage:
+    runs-on: ubuntu-latest
+    needs: sit
+    steps:
+      - name: STAGE Deployment
+        run: |
+          echo "Deploying to STAGE environment"
+
+  train:
+    runs-on: ubuntu-latest
+    needs: stage
+    steps:
+      - name: TRAIN Deployment
+        run: |
+          echo "Deploying to TRAIN environment"
+
+  prod:
+    runs-on: ubuntu-latest
+    needs: train
+    steps:
+      - name: PROD Deployment
+        run: |
+          echo "Deploying to PROD environment"
