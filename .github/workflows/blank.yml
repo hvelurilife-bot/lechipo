@@ -12,6 +12,7 @@ jobs:
         run: |
           echo "Deploying to SIT environment"
           echo "Harsha is in the DevOps team"
+          echo "hello, ${{vars.REPO_VARIALBES}}"
 
   stage:
     runs-on: ubuntu-latest
