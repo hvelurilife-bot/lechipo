@@ -1,4 +1,4 @@
-name: Hello world
+name: Github Action Demo
 
 on:
   push
@@ -13,6 +13,10 @@ jobs:
           echo "Deploying to SIT environment"
           echo "Harsha is in the DevOps team"
           echo "hello," ${{secrets.GOA_LO_BAMCHIK}}
+          - name: checkout the code
+          uses: actions/checkout@v4
+          - name: print index.html file
+          run: cat index.html
 
   stage:
     runs-on: ubuntu-latest
