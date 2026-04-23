@@ -8,15 +8,17 @@ jobs:
   sit:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
       - name: SIT Deployment
         run: |
           echo "Deploying to SIT environment"
           echo "Harsha is in the DevOps team"
-          echo "hello," ${{secrets.GOA_LO_BAMCHIK}}
-          - name: checkout the code
-          uses: actions/checkout@v4
-          - name: print index.html file
-          run: cat index.html
+          echo "hello, ${{ secrets.GOA_LO_BAMCHIK }}"
+
+      - name: Print index.html file
+        run: cat index.html
 
   stage:
     runs-on: ubuntu-latest
